@@ -59,5 +59,50 @@ use the test_video.py file to check how this work with real time or on video it 
 # Scoring emotion
 some time many project need the score of emotion so you can use the score_emotion.py file, you can also change the scoreing to your required.
 
-# project integration
-you want integrate it to your existing project the use the emotion_recognition.py file.
+# Project integration
+If you want to Integrate it to your Project Use the given file emotion_recognition.py
+
+# Emotion Detection from Video with OpenCV and DeepFace
+
+This Python script utilizes OpenCV and DeepFace to perform emotion detection on a video file. The script reads frames from the video, analyzes the dominant emotion in each frame using DeepFace, and calculates emotion scores for different categories.
+
+## Function: `detect_emotions`
+
+### Input
+- `video_path`: Path to the video file for emotion detection.
+
+### Output
+- Returns a JSON-formatted string containing emotion scores for 'neutral,' 'happy,' 'surprise,' 'angry,' 'disgust,' 'fear,' and 'sad.'
+
+## Code Overview
+
+1. **Initialization:**
+   - Define the function `detect_emotions` that takes a `video_path` as input.
+
+2. **Video Processing Loop:**
+   - Open the video file using OpenCV.
+   - Get the total number of frames in the video.
+   - Initialize a dictionary to store emotion scores for different categories.
+
+3. **Main Loop:**
+   - Continuously read frames from the video.
+   - Analyze every 5th frame using DeepFace to obtain the dominant emotion.
+   - Update the emotion scores based on the dominant emotion in each frame.
+   - Break the loop if the 'q' key is pressed.
+
+4. **Emotion Score Calculation:**
+   - Calculate emotion scores as a percentage of frames where each emotion is dominant.
+   - Format the scores to two decimal places.
+
+5. **Output:**
+   - Return a JSON-formatted string containing emotion scores.
+
+6. **Script Execution:**
+   - If the script is executed directly, specify the `video_path` and call the `detect_emotions` function.
+   - Print the resulting emotion scores.
+
+## Execution
+- Update the `video_path` variable with the path to the desired video file.
+- Execute the script, and it will print JSON-formatted emotion scores based on the analysis of the video frames.
+
+
