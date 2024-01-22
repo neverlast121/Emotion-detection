@@ -1,7 +1,7 @@
 import cv2
 from deepface import DeepFace
 from collections import Counter
-video = 'C:/Users/never/Desktop/activity-recognition/video_1.mp4'
+video = './activity-recognition/video_1.mp4'
 cap = cv2.VideoCapture(video)
 
 
